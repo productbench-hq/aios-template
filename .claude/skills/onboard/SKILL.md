@@ -77,7 +77,7 @@ Print one screen. Four lines max:
 
 Today: ask me — "what should I focus on this week?"
 Also today: got a customer interview, a doc, or a set of notes handy? Drop it in and I'll show you the knowledge layer.
-Tomorrow: pick one tool from context/connections.md and wire it up (manual MCP install or write a small API script + save references/{tool}-api.md).
+Tomorrow: pick one tool from context/connections.md and wire it up (built-in connector if your app has one, otherwise an MCP server or a small API script + save references/{tool}-api.md).
 ```
 
 When the user runs the closing prompt ("what should I focus on this week?"), respond using only the new context files. Hit:
