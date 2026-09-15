@@ -1,0 +1,14 @@
+.env
+.env.local
+.DS_Store
+*.log
+__pycache__/
+node_modules/
+.claude/settings.local.json
+audits/
+
+# Raw source material (interviews, transcripts, docs you drop in).
+# Keep your real work data out of git - the compiled pages in knowledge/pages/ are what you version.
+knowledge/sources/*
+!knowledge/sources/.gitkeep
+!knowledge/sources/**/.gitkeep
