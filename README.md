@@ -1,6 +1,6 @@
 # Productbench AIOS — Starter Kit
 
-A free, MIT-licensed starter kit that turns Claude Code or Codex into your personal **AI Operating System (AIOS)**. Built by [Productbench](https://www.productbench.co/) for product managers, senior PMs, and heads of product — handed out at our workshops.
+A free, MIT-licensed starter kit that turns your AI agent into your personal **AI Operating System (AIOS)**. Built by [Productbench](https://www.productbench.co/) for product managers, senior PMs, and heads of product — handed out at our workshops.
 
 The kit personalizes itself to you via an `/onboard` interview, then grows in two ways: **skills** for the recurring work in your role, and **expansions** (extensions and folders from `EXPANSIONS.md`) when your knowledge base or structure outgrows the basics.
 
