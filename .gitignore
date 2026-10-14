@@ -12,3 +12,6 @@ audits/
 knowledge/sources/*
 !knowledge/sources/.gitkeep
 !knowledge/sources/**/.gitkeep
+
+# catching-up skill: time of the last scan, per machine
+.claude/state/

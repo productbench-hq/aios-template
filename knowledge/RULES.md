@@ -16,7 +16,7 @@ Concept and operating instructions in one. The LLM operates the system exactly a
 knowledge/
   log/YYYY-MM-DD.md             ground truth 1
   sources/<folder>/<name>.md    ground truth 2
-  pages/<folder>/<name>.md      compiled knowledge
+  pages/<folder>/<name>.md      compiled knowledge: one page per question
   index.md                      cache: one line per page and source
 ```
 
@@ -86,7 +86,9 @@ Dropped in, extracted, filed, cited — never edited after. A correction is a ne
 
 ## Pages
 
-Compiled current knowledge, readable by human and LLM. Content shape is your choice within these constraints:
+Compiled current knowledge, readable by human and LLM. **One page answers one question the human keeps needing answered**: "What's stopping customers from renewing?", "Where do new users get stuck in week one?", "What did we decide about the free plan, and what would change it?". The page holds the current answer, rewritten as new evidence arrives. Name the file after the question's topic (`renewal-blockers`); folders group questions by theme.
+
+Content shape is your choice within these constraints:
 
 - Every factual claim carries a numbered citation `[n]` or the marker `inferred`. Nothing else.
 - `## Sources` footer: `[n] log:YYYY-MM-DD HH:MM` or `[n] source:<name>`. Numbers stable, never reused, gaps allowed. (Pre-decided: if the first two audits find number drift, switch to inline `[log:…]`/`[source:…]` tags.)
@@ -94,20 +96,21 @@ Compiled current knowledge, readable by human and LLM. Content shape is your cho
 - `[[links]]` for navigation, never as evidence.
 
 ```
+question: the question this page answers, as the human would ask it
 type: entity | concept | problem | decision | pattern | hypothesis
 tags: [acme, pricing]
-description: one line — what this answers, when to open it
+description: one line — when to open it
 updated_at: YYYY-MM-DD HH:MM
 ```
 
-**Created only when a task needs it and the log or sources can already fill it** — something spanning more than one day or source, that someone will ask again. Otherwise, answer straight from the log; the page appears the second time the topic comes up, not the first.
+**Created only when a question comes up a second time and the log or sources can already answer it** — something spanning more than one day or source. The first time, answer straight from the log. A new question that an existing page already answers goes to that page, not a new one.
 
 **Wrong claims are fixed through the log, never by hand.** Told "wrong" → follow the citation. The evidence backs the claim → the evidence was wrong, write a `correction:` and recompile. It doesn't → the compile was wrong, regenerate the page.
 
 
 ## Index
 
-`index.md`: one line per page and source — name, description, type/kind, tags, date. Regenerated after every write, never edited by hand.
+`index.md`: one line per page and source — name, question (pages) or description (sources), type/kind, tags, date. Match a new question against the page questions here before creating a page. Regenerated after every write, never edited by hand.
 
 ## Never
 
@@ -128,7 +131,7 @@ Deciding what is durable at write time. Mitigation: low bar for the log, high ba
 
 ## Worked example
 
-Three customer interviews come in. A page gets created on the third one — that's the recurrence bar being met.
+Three customer interviews come in. The PM asks "how price-sensitive are our customers?" after the first and again after the third. The page gets created on the second ask — that's the recurrence bar being met.
 
 `knowledge/log/YYYY-MM-DD.md`:
 ```
@@ -139,6 +142,7 @@ Three customer interviews come in. A page gets created on the third one — that
 - note: (inferred) enterprise buyers care more about SSO than price
 - sys: ingested: customers/int-03-priya.md
 - note: pricing came up again — Priya, interview
+- note: asked again: how price-sensitive are our customers?
 - sys: created: customers/pricing-sensitivity.md
 - done: 3 interviews logged, one page compiled
 ```
@@ -156,9 +160,10 @@ description: Discovery call, mid-market segment
 
 `knowledge/pages/customers/pricing-sensitivity.md`:
 ```
+question: How price-sensitive are our customers, by segment?
 type: pattern
 tags: [customers, pricing]
-description: Pricing sensitivity by segment — when it's raised, by whom, how
+description: Open before pricing, packaging or plan-limit decisions
 updated_at: 2026-09-08 14:20
 ---
 Pricing comes up unprompted in most mid-market interviews [1] [3]. Enterprise buyers raise SSO and access control before price — pricing sensitivity there is inferred, not stated directly [2].
@@ -169,6 +174,6 @@ Pricing comes up unprompted in most mid-market interviews [1] [3]. Enterprise bu
 [3] source:customers/int-03-priya
 ```
 
-Two more interviews later mention pricing — the page gets edited, not recreated: the claim updates, a new citation gets added, `updated_at` moves forward.
+Two more interviews later mention pricing — the page's answer gets edited, not recreated: the claim updates, a new citation gets added, `updated_at` moves forward.
 
 ---

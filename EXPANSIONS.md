@@ -18,7 +18,8 @@ Your AIOS structure should look like a small, well-run practice. Not a hoarder's
 | `knowledge/` | Log, sources, compiled pages, and index — the knowledge layer. Rules in `knowledge/RULES.md`. |
 | `references/` | Read on demand: skill guide, frameworks, API guides, SOPs as you build them. |
 | `archive/` | Old files. Don't delete — move here. |
-| `.claude/skills/` | `/onboard`, `/evaluating-skills`, `/weekly-review`, plus whatever you author as needs come up. |
+| `.claude/skills/` | `/onboard`, `/catching-up`, plus whatever you author as needs come up. |
+| `.claude/hooks/` + `.claude/settings.json` | Session-start nudge: asks for a catch-up when the last one is over 4 hours old. |
 | `EXPANSIONS.md` | This file. |
 
 ---
@@ -48,7 +49,7 @@ Install: read the extension's section at the bottom of this file, then add its n
 | `workbench` | Tasks produce working files | Draws the line: cited material becomes ground truth, the rest dies with the task |
 | `streams` | An engagement or initiative is ongoing enough that stalling would matter | Tracks the next step and flags when it's overdue |
 | `freshness` | Pages hold claims old enough to mislead | Flags stale claims at the moment you read them |
-| `audit-archive` | `knowledge/pages/` has enough in it that drift, broken citations, or clutter are a real risk | Weekly check (runs inside `/weekly-review`) catches drift before it compounds; unread material ages out without being deleted |
+| `audit-archive` | `knowledge/pages/` has enough in it that drift, broken citations, or clutter are a real risk | Weekly check (run it when you ask for an audit) catches drift before it compounds; unread material ages out without being deleted |
 
 Sensible order: `workbench` early if your work produces files. `freshness` before `audit-archive`. `streams` when the first real engagement starts. Day 1 with empty pages: none.
 
@@ -59,7 +60,7 @@ Sensible order: `workbench` early if your work produces files. `freshness` befor
 When each surface gets routinely touched:
 
 - `knowledge/log/` — every working session, unprompted, per `knowledge/RULES.md`'s Loop
-- `/weekly-review` — once a week, 15 minutes; turns what broke and what repeated into file changes
+- `/catching-up` — every session start, nudged by the hook; what changed in your tools since you last looked
 - `archive/` — quarterly cleanup; move stale projects, deprecated skills, old intake versions
 - `references/sops/` — when a process gets re-run by someone new, write the SOP
 - `context/connections.md` — every time a new tool gets wired in, add a row
@@ -254,7 +255,7 @@ With this extension, Axiom 4 reads: **the knowledge base deletes nothing — it 
 
 #### Audit
 
-Weekly, inside `/weekly-review` (step 1) — not a separate ritual. You run all checks, write one report, propose; the human disposes in one pass; logged `sys: audit:`. Budget: more than ~10 questions a week across the review, audit, horizons, and pulse means the calibration is wrong, not the human — lengthen horizons or raise thresholds.
+Weekly, when the human asks for an audit ("audit my knowledge base"). You run all checks, write one report, propose; the human disposes in one pass; logged `sys: audit:`. Budget: more than ~10 questions a week across the audit, horizons, and pulse means the calibration is wrong, not the human — lengthen horizons or raise thresholds.
 
 - **Integrity:** missing frontmatter · file newer than `updated_at` · index ≠ disk · broken links · citations without a footer line · footer lines without a file · claims without citation or marker
 - **Freshness:** claims past horizon (one question per page) · claims on archived sources only · open `unresolved` · same fact, different value on two pages

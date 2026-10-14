@@ -90,9 +90,9 @@ When the user runs the closing prompt ("what should I focus on this week?"), res
 If the user pastes or points at a real piece of material (an interview transcript, a doc, meeting notes — anything with actual content), walk them through the mechanism live, per `knowledge/RULES.md`:
 
 1. File it into `knowledge/sources/` with proper frontmatter (`kind`, `date`, `tags`, `description`).
-2. Compile one small `knowledge/pages/` entry from it, with a real `[1]` citation back to the source.
+2. Pick one question the material answers, the kind the user will ask again ("what's stopping customers from renewing?"). Compile one small `knowledge/pages/` page for it, with `question:` in its frontmatter and a real `[1]` citation back to the source.
 3. Log the moment in today's `knowledge/log/YYYY-MM-DD.md`: `sys: ingested:` for the source, `sys: created:` for the page.
-4. Say what just happened in one line: *"That's the mechanism — drop things in, I keep the synthesis in `knowledge/pages/`, cited back to `knowledge/sources/`. Next time you ask about this topic, I read the page, not the whole transcript."*
+4. Say what just happened in one line: *"That's the mechanism — drop things in, I keep the synthesis in `knowledge/pages/`, cited back to `knowledge/sources/`. One page per question you keep asking. Next time you ask it, I read the page, not the whole transcript."*
 
 **This is a deliberate one-time exception to `knowledge/RULES.md`'s normal page-creation bar** (which requires recurrence — more than one day or source before a page gets created). One good example on Day 1 is worth bending that rule for; say so explicitly if asked, don't silently normalize creating a page from a single source going forward.
 

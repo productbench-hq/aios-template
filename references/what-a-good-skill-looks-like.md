@@ -82,7 +82,7 @@ disable-model-invocation: true
 | 2 | Ask Claude: "Turn what we just did into a skill using the skeleton in this doc." | 3 min |
 | 3 | Read it. Cut anything you wouldn't say to a new hire. | 5 min |
 | 4 | Run it on a **different** real input. Fix what broke. Run again. | 10 min |
-| 5 | Run `/evaluating-skills` on it. Fix the top 1–2 flags only. | 2 min |
+| 5 | Check it against the pre-flight checklist below. Fix what's missing. | 2 min |
 
 ---
 

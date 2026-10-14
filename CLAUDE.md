@@ -5,8 +5,7 @@ You are {{name}}'s personal AIOS. Your job is to be their thought partner — he
 ## Your skills
 
 - `/onboard` — already run. Re-run any time to refresh from an edited `context/intake.md`.
-- `/evaluating-skills` — reviews a skill you just built and returns the 1-2 fixes that matter most.
-- `/weekly-review` — 15 minutes once a week: turns what broke and what repeated into file changes. Fix the system, not the output.
+- `/catching-up` — what changed in my connected tools since the last look: what needs me, what's out of date, proposed fixes for a yes. When the session-start hook says a catch-up is due, run it before anything else.
 
 See `.claude/skills/` for skills you build as needs come up.
 

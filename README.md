@@ -11,8 +11,7 @@ The kit personalizes itself to you via an `/onboard` interview, then grows in tw
 | Piece | What it is |
 |---|---|
 | `/onboard` | Setup wizard. 7-question interview, generates your Day-1 file set, fills `CLAUDE.md`. |
-| `/evaluating-skills` | Reviews a skill you just built and returns the 1-2 fixes that matter most. |
-| `/weekly-review` | 15 minutes once a week: turns what broke and what repeated into file changes. |
+| `/catching-up` | What changed in your connected tools since you last looked: what needs you, what's out of date, with fixes for a yes. Nudged at session start. |
 | `knowledge/` | The knowledge base: log, sources, cited pages, and its rules in `RULES.md`. |
 | `context/personalities/` | 8 voice overlays you can switch per task. |
 | `EXPANSIONS.md` | One catalog of everything to add later, and when. |
@@ -28,9 +27,9 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 1. **Get your own copy.** Click **Use this template → Create a new repository**, set it to **Private**, then clone it. Your answers and content stay in your copy; nothing gets sent back to Productbench. No GitHub account? **Code → Download ZIP** works too. Don't fork: a fork of this public repo is public too.
 2. **Open it in Claude Code or Codex** and run `/onboard`. Answer the 7 questions honestly — voice samples get pasted, not described. About 15 minutes.
 3. **Connect one tool.** Pick one from `context/connections.md` (your calendar, Slack, your tracker) and wire it up via a connector/MCP or a small API script. Save what you learn in `references/{tool}-api.md`.
+   Then say **"catch me up"**: `/catching-up` reads what changed there since you last looked. From then on it's nudged at the start of every session.
 4. **Use it for a week.** Bring real questions, make real decisions — Claude logs them to `knowledge/log/` as you go. Hand over real material (interview transcripts, docs) and watch it turn into cited synthesis in `knowledge/pages/`. Note: raw material in `knowledge/sources/` is kept out of git on purpose (see `.gitignore`), so back it up separately if you need to.
-5. **Grow it.** A manual task repeats 3+ times → build a skill: follow `references/what-a-good-skill-looks-like.md`, then run `/evaluating-skills` on it. The knowledge base starts to need lifecycle management → add an expansion (`EXPANSIONS.md` tells you which, when).
-6. **Run `/weekly-review` once a week.** Fix the system, not the output.
+5. **Grow it.** A manual task repeats 3+ times → build a skill: follow `references/what-a-good-skill-looks-like.md` and its pre-flight checklist. The knowledge base starts to need lifecycle management → add an expansion (`EXPANSIONS.md` tells you which, when).
 
 ---
 
@@ -52,7 +51,8 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 ├── references/              ← Read on demand: API guides, SOPs, skill guides
 │   └── what-a-good-skill-looks-like.md  ← How to build a skill: principles, skeleton, checklist
 ├── archive/                 ← Old material. Don't delete — move here.
-└── .claude/skills/          ← /onboard, /evaluating-skills, /weekly-review + yours
+├── .claude/hooks/           ← Session-start nudge for /catching-up
+└── .claude/skills/          ← /onboard, /catching-up + yours
 ```
 
 The design premise, in one line: **you keep the synthesis, not the pile of transcripts** — every claim in `pages/` cites its evidence in `log/` or `sources/`. Full rules in `knowledge/RULES.md`.
