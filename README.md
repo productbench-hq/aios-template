@@ -25,7 +25,9 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 ## Quick start
 
 1. **Get your own copy.** Click **Use this template → Create a new repository**, set it to **Private**, then clone it. Your answers and content stay in your copy; nothing gets sent back to Productbench. No GitHub account? **Code → Download ZIP** works too. Don't fork: a fork of this public repo is public too.
-2. **Open it in Claude Code or Codex** and run `/onboard`. Answer the 7 questions honestly — voice samples get pasted, not described. About 15 minutes.
+2. **Open it in Claude Code or Codex** and run `/onboard`.
+   *Using the Claude desktop app?* Download the ZIP and unzip it somewhere you'll find again (e.g. `Documents`). Open the app, switch to the **Code** tab, start a new session and choose the unzipped folder. Type `/onboard` and press Enter. Claude asks before it writes files or runs a command: approve those prompts, that's the kit setting itself up.
+   Answer the 7 questions honestly — voice samples get pasted, not described. About 15 minutes.
 3. **Connect one tool.** Pick one from `context/connections.md` (your calendar, Slack, your tracker) and wire it up via a connector/MCP or a small API script. Save what you learn in `references/{tool}-api.md`.
    Then say **"catch me up"**: `/catching-up` reads what changed there since you last looked. From then on it's nudged at the start of every session.
 4. **Use it for a week.** Bring real questions, make real decisions — Claude logs them to `knowledge/log/` as you go. Hand over real material (interview transcripts, docs) and watch it turn into cited synthesis in `knowledge/pages/`. Note: raw material in `knowledge/sources/` is kept out of git on purpose (see `.gitignore`), so back it up separately if you need to.

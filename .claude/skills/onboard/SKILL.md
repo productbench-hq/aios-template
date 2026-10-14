@@ -65,7 +65,7 @@ Once the intake is complete, generate these files (or update if re-running). Bac
 2. **`context/about-business.md`** — from Q1 (product owned, stakeholders/users) + Q4 (key metric). One paragraph. (Filename stays generic even though the content here is about a product, not a company, to keep the file layout consistent across forks of this kit.)
 3. **`context/priorities.md`** — from Q3. Numbered list, one line per priority.
 4. **`context/voice.md`** — from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
-5. **`context/connections.md`** — populate the 7-row table from Q4-Q7 answers. Each row gets `mechanism: not yet connected`, `auth: —`, `last checked: —`. The user wires connections on Day 2.
+5. **`context/connections.md`** — populate the 7-row table from Q4-Q7 answers. Each row gets `mechanism: not yet connected`, `auth: —`, `last checked: —`. The user wires the first one right after onboarding.
 6. **`CLAUDE.md`** — fill all `{{...}}` placeholders. Substitute the user's name, role and product, stated priorities, voice register summary, and a brief connections summary.
 
 ### Step 4: The closing screen
@@ -77,7 +77,7 @@ Print one screen. Four lines max:
 
 Today: ask me — "what should I focus on this week?"
 Also today: got a customer interview, a doc, or a set of notes handy? Drop it in and I'll show you the knowledge layer.
-Tomorrow: pick one tool from context/connections.md and wire it up (built-in connector if your app has one, otherwise an MCP server or a small API script + save references/{tool}-api.md).
+Next: pick one tool from context/connections.md and wire it up (built-in connector if your app has one, otherwise an MCP server or a small API script + save references/{tool}-api.md), then say "catch me up".
 ```
 
 When the user runs the closing prompt ("what should I focus on this week?"), respond using only the new context files. Hit:
@@ -106,7 +106,7 @@ If they don't have anything handy, skip this step — don't manufacture a fake e
 4. **Idempotent.** Re-running with an edited intake refreshes context files; backs up originals to `archive/intake-{ts}/`. Skips questions already answered unless the user wants to revise.
 5. **Closing screen is four lines.** Not a menu.
 6. **No extra skills generated.** Don't scaffold `/today`, `/draft`, `/connect`, etc.
-7. **No `.env` writes.** Don't ask for API keys on Day 1. Connections come Day 2.
+7. **No `.env` writes.** Don't ask for API keys during onboarding. Connections come right after.
 
 ## Verification (for the implementer)
 

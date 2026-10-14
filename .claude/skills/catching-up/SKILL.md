@@ -32,7 +32,7 @@ One read-only pass per source:
 | Domain | What to keep |
 |---|---|
 | Communication (email, Slack, Teams) | Messages from people in the window: stakeholders, your team, users, threads you're cc'd on. Keep notices that ask for a decision. Drop newsletters, promotions and tool notifications. |
-| Calendar | Events from now to +14 days whose created or updated time falls in the window: new bookings, cancellations, declines, moved times. |
+| Calendar | Events from now to +14 days whose created or updated time falls in the window: new bookings, cancellations, declines, moved times. Also every event in that range you haven't answered yet, however old the invite: those go under Needs you. |
 | Backlog / roadmap tracking | Issues changed in the window that are assigned to you, created by others for you, or changed status. |
 | Knowledge / files | Docs modified in the window by someone other than you. |
 | Meeting intelligence | New meeting notes or transcripts in the window. |

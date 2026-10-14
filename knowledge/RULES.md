@@ -74,7 +74,7 @@ Record what happened and when. Everything else is compiled from this.
 The world's words, immutable, readable text. Binaries are attachments; extracted text is the source.
 
 ```
-kind: interview | correspondence | document | research | snapshot
+kind: interview | meeting | correspondence | document | research | snapshot
 who: only when someone said it
 date: YYYY-MM-DD
 tags: [acme, pricing]
