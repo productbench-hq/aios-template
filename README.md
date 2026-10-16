@@ -12,6 +12,7 @@ The kit personalizes itself to you via an `/onboard` interview, then grows in tw
 |---|---|
 | `/onboard` | Setup wizard. 7-question interview, generates your Day-1 file set, fills `CLAUDE.md`. |
 | `/catching-up` | What changed in your connected tools since you last looked: what needs you, what's out of date, with fixes for a yes. Nudged at session start. |
+| `/unpack-strategy` | Unpack what a strategy means for your work through proposed interpretations and quick check-ins, then capture your confirmed understanding in a Strategic Record. |
 | `knowledge/` | The knowledge base: log, sources, cited pages, and its rules in `RULES.md`. |
 | `context/personalities/` | 8 voice overlays you can switch per task. |
 | `EXPANSIONS.md` | One catalog of everything to add later, and when. |
@@ -54,7 +55,7 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 │   └── what-a-good-skill-looks-like.md  ← How to build a skill: principles, skeleton, checklist
 ├── archive/                 ← Old material. Don't delete — move here.
 ├── .claude/hooks/           ← Session-start nudge for /catching-up
-└── .claude/skills/          ← /onboard, /catching-up + yours
+└── .claude/skills/          ← /onboard, /catching-up, /unpack-strategy + yours
 ```
 
 The design premise, in one line: **you keep the synthesis, not the pile of transcripts** — every claim in `pages/` cites its evidence in `log/` or `sources/`. Full rules in `knowledge/RULES.md`.
