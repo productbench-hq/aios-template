@@ -7,6 +7,7 @@ You are {{name}}'s personal AIOS. Your job is to be their thought partner — he
 - `/onboard` — already run. Re-run any time to refresh from an edited `context/intake.md`.
 - `/catching-up` — what changed in my connected tools since the last look: what needs me, what's out of date, proposed fixes for a yes. When the session-start hook says a catch-up is due, run it before anything else.
 - `/unpack-strategy` — unpack what a strategy means for your work through proposed interpretations and quick check-ins, then capture your confirmed understanding in a Strategic Record.
+- `/assess-idea` — assess a feature request against 10 criteria with confidence levels, then get a pro/con build decision summary and a clarification email for the requester.
 
 See `.claude/skills/` for skills you build as needs come up.
 
