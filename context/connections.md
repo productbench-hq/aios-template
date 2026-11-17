@@ -1,6 +1,6 @@
 # Connections
 
-Registry of every system your AIOS can reach. Filled by `/onboard` from Q4-Q7 answers; expanded over time as you wire new tools.
+Registry of every system your AIOS can reach. Filled by `/onboard` and expanded every time you set up a new connection: add a row, never a second list elsewhere.
 
 | # | Domain | Tool | Mechanism | Auth | Last checked |
 |---|---|---|---|---|---|

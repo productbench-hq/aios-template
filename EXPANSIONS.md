@@ -12,13 +12,12 @@ Your AIOS structure should look like a small, well-run practice. Not a hoarder's
 |---|---|
 | `CLAUDE.md` | Root operating manual. Filled by `/onboard`. Edit when your role/voice changes. |
 | `context/` | About you, your product, your priorities. Filled by `/onboard`. |
-| `context/intake.md` | Source-of-truth for `/onboard`. Edit and re-run any time. |
+| `context/intake.md` | `/onboard`'s progress log: what's confirmed, skipped or pending. Re-run `/onboard` any time to update. |
 | `context/connections.md` | Registry of every system your AIOS can reach. |
-| `context/personalities/` | Task-scoped voice overlays — 8 of them, from concise to hype. |
 | `knowledge/` | Log, sources, compiled pages, and index — the knowledge layer. Rules in `knowledge/RULES.md`. |
 | `references/` | Read on demand: skill guide, frameworks, API guides, SOPs as you build them. |
 | `archive/` | Old files. Don't delete — move here. |
-| `.claude/skills/` | `/onboard`, `/catching-up`, plus whatever you author as needs come up. |
+| `.claude/skills/` | `/onboard`, `/catching-up`, `/meetings-to-issues`, `/decision-review`, plus whatever you author as needs come up. |
 | `.claude/hooks/` + `.claude/settings.json` | Session-start nudge: asks for a catch-up when the last one is over 4 hours old. |
 | `EXPANSIONS.md` | This file. |
 

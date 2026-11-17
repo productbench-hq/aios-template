@@ -10,12 +10,11 @@ The kit personalizes itself to you via an `/onboard` interview, then grows in tw
 
 | Piece | What it is |
 |---|---|
-| `/onboard` | Setup wizard. 7-question interview, generates your Day-1 file set, fills `CLAUDE.md`. |
+| `/onboard` | Guided setup: your name, writing style, company and role, how you work together, optional goals. Fills `CLAUDE.md` and `context/`. Skip anything. |
 | `/catching-up` | What changed in your connected tools since you last looked: what needs you, what's out of date, with fixes for a yes. Nudged at session start. |
-| `/unpack-strategy` | Unpack what a strategy means for your work through proposed interpretations and quick check-ins, then capture your confirmed understanding in a Strategic Record. |
-| `/assess-idea` | Assess a feature request against 10 criteria with confidence levels, then get a pro/con build decision summary and a clarification email for the requester. |
+| `/meetings-to-issues` | Turns meeting notes into tracker issues, logged decisions and parked ideas. Checks for duplicates and creates nothing until you say yes. |
+| `/decision-review` | Reviews a decision before you commit: the assumptions you haven't said out loud, checked against your evidence, with the cheapest test for each. You make the call; it reminds you to check back. |
 | `knowledge/` | The knowledge base: log, sources, cited pages, and its rules in `RULES.md`. |
-| `context/personalities/` | 8 voice overlays you can switch per task. |
 | `EXPANSIONS.md` | One catalog of everything to add later, and when. |
 
 That's it out of the box. You build more skills as real, recurring needs show up. Start with `references/what-a-good-skill-looks-like.md`, and see `EXPANSIONS.md` for what to add and when.
@@ -29,7 +28,7 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 1. **Get your own copy.** Click **Use this template → Create a new repository**, set it to **Private**, then clone it. Your answers and content stay in your copy; nothing gets sent back to Productbench. No GitHub account? **Code → Download ZIP** works too. Don't fork: a fork of this public repo is public too.
 2. **Open it in Claude Code or Codex** and run `/onboard`.
    *Using the Claude desktop app?* Download the ZIP and unzip it somewhere you'll find again (e.g. `Documents`). Open the app, switch to the **Code** tab, start a new session and choose the unzipped folder. Type `/onboard` and press Enter. Claude asks before it writes files or runs a command: approve those prompts, that's the kit setting itself up.
-   Answer the 7 questions honestly — voice samples get pasted, not described. About 15 minutes.
+   It asks one short thing at a time and you can skip anything. For your writing style, paste a few things you wrote or connect a tool you write in. About 15 minutes.
 3. **Connect one tool.** Pick one from `context/connections.md` (your calendar, Slack, your tracker) and wire it up via a connector/MCP or a small API script. Save what you learn in `references/{tool}-api.md`.
    Then say **"catch me up"**: `/catching-up` reads what changed there since you last looked. From then on it's nudged at the start of every session.
 4. **Use it for a week.** Bring real questions, make real decisions — Claude logs them to `knowledge/log/` as you go. Hand over real material (interview transcripts, docs) and watch it turn into cited synthesis in `knowledge/pages/`. Note: raw material in `knowledge/sources/` is kept out of git on purpose (see `.gitignore`), so back it up separately if you need to.
@@ -45,7 +44,7 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 ├── AGENTS.md                ← Points Codex to CLAUDE.md and the skills
 ├── EXPANSIONS.md            ← Everything to add later, and when
 ├── LICENSE
-├── context/                 ← About you and your world: personalities, connections.md, intake.md (/onboard source)
+├── context/                 ← About you and your world: connections.md, intake.md (/onboard progress log)
 │                                + about-me, about-business, priorities, voice (created by /onboard)
 ├── knowledge/               ← The knowledge base — read its RULES.md first
 │   ├── log/                 ← Ground truth: what happened, daily files, append-only
@@ -56,7 +55,7 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 │   └── what-a-good-skill-looks-like.md  ← How to build a skill: principles, skeleton, checklist
 ├── archive/                 ← Old material. Don't delete — move here.
 ├── .claude/hooks/           ← Session-start nudge for /catching-up
-└── .claude/skills/          ← /onboard, /catching-up, /unpack-strategy, /assess-idea + yours
+└── .claude/skills/          ← /onboard, /catching-up, /meetings-to-issues, /decision-review + yours
 ```
 
 The design premise, in one line: **you keep the synthesis, not the pile of transcripts** — every claim in `pages/` cites its evidence in `log/` or `sources/`. Full rules in `knowledge/RULES.md`.
