@@ -83,7 +83,7 @@ Start with existing context and clues from supplied material. Propose likely com
 
 Use that example only when the actual evidence supports it. If the user says "guess", make a grounded proposal and ask for correction; do not invent missing personal facts. A co-founder title alone does not establish company-wide responsibility.
 
-When a website is supplied, read [references/company-brief.md](references/company-brief.md) and research it before asking follow-up questions it could answer. If browsing or the site is unavailable, use supplied context and name the gap; continue onboarding.
+When a website is supplied, read the homepage and at most two more pages (about, product or pricing) before asking follow-up questions they could answer. Keep it light: no wider web search during onboarding. If the site is unavailable, use supplied context and name the gap; continue onboarding. Offer deeper company research later, as a normal task.
 
 Ask only for gaps, one at a time:
 
@@ -95,7 +95,7 @@ These are fallback questions, not a mandatory interview. Do not ask them after t
 
 Accept self-employment, multiple roles, study, and no current company. Do not force a company website or a product owner role.
 
-Show the complete Core Brief from the research prompt: all nine fields, under 200 words, plus material uncertainties. Retain field-level confidence and discrepancy tables in the file and make them available underneath on request. Do not reduce the brief to generic company bullets. Include any still-unconfirmed role or scope proposal in the same check-in when useful. Ask: **Is this accurate? Anything important to add?**
+Show a short company brief, under 120 words: what the company does, for whom, its main product(s), business model, and anything notable you found. Mark what came from the site versus what you inferred, and name what's missing. Do not pad it with generic company bullets. Include any still-unconfirmed role or scope proposal in the same check-in when useful. Ask: **Is this accurate? Anything important to add?**
 
 Save company/product context in `context/about-business.md`; identity, role, and responsibilities in `context/about-me.md`. Keep public signals about company focus labeled as inferred. They are not the user's priorities.
 
