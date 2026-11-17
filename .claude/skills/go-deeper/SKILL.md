@@ -3,7 +3,7 @@ name: go-deeper
 description: Rewrites a task into the deeper version a top professional would do. Use when the user says "go deeper" or runs /go-deeper.
 ---
 
-Make the task deeper, not bigger. Before rewriting it, answer, specific to this task:
+Go deeper on the task without changing its scope. Before rewriting it, answer, specific to this task:
 
 1. What would the best professional in this field do here that the task doesn't ask for?
 2. What raw material would they start from, instead of something already summarised?
