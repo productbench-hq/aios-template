@@ -14,7 +14,6 @@ Your AIOS structure should look like a small, well-run practice. Not a hoarder's
 | `context/` | About you, your product, your priorities. Filled by `/onboard`. |
 | `context/intake.md` | `/onboard`'s progress log: what's confirmed, skipped or pending. Re-run `/onboard` any time to update. |
 | `context/connections.md` | Registry of every system your AIOS can reach. |
-| `context/personalities/` | Task-scoped voice overlays — 8 of them, from concise to hype. |
 | `knowledge/` | Log, sources, compiled pages, and index — the knowledge layer. Rules in `knowledge/RULES.md`. |
 | `references/` | Read on demand: skill guide, frameworks, API guides, SOPs as you build them. |
 | `archive/` | Old files. Don't delete — move here. |

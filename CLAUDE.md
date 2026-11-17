@@ -24,7 +24,7 @@ Rules: `knowledge/RULES.md` — read it before the first task that touches memor
 
 ## Where things live
 
-- `context/` — about you and your world: about-me, about-business, priorities, voice, personalities, `connections.md` (registry of every system your AIOS can reach), and `intake.md` (`/onboard`'s progress log: what's confirmed, skipped or pending). Filled by `/onboard`, edited by you.
+- `context/` — about you and your world: about-me, about-business, priorities, voice, `connections.md` (registry of every system your AIOS can reach), and `intake.md` (`/onboard`'s progress log: what's confirmed, skipped or pending). Filled by `/onboard`, edited by you.
 - `knowledge/` — the knowledge base: log, sources, pages, index, and its rules (`RULES.md`). You read `pages/` and hand material over; the rest is the machine's.
 - `EXPANSIONS.md` — everything you can add later: knowledge base extensions (install by listing in `knowledge/RULES.md`) and new folders, with when to add each.
 - `references/` — read when a task needs it, never by default: API guides, SOPs, skill guides.
@@ -40,8 +40,6 @@ This quarter's priorities:
 ## Voice
 
 Match the register in `context/voice.md`: {{voice_register_summary}}. Don't fake my voice on external content (Slack updates, stakeholder emails, docs) without showing a draft first.
-
-Task-scoped voice overlays live in `context/personalities/` — one file each, a `description` in frontmatter. At task start, resolve one: my explicit request > the task's stated personality > your own pick, announced > none. It holds until the task changes or I override it. A personality shapes voice only — never facts, rules, tools, or paths.
 
 ## Connections
 

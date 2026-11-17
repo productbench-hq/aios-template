@@ -15,7 +15,6 @@ The kit personalizes itself to you via an `/onboard` interview, then grows in tw
 | `/unpack-strategy` | Unpack what a strategy means for your work through proposed interpretations and quick check-ins, then capture your confirmed understanding in a Strategic Record. |
 | `/assess-idea` | Assess a feature request against 10 criteria with confidence levels, then get a pro/con build decision summary and a clarification email for the requester. |
 | `knowledge/` | The knowledge base: log, sources, cited pages, and its rules in `RULES.md`. |
-| `context/personalities/` | 8 voice overlays you can switch per task. |
 | `EXPANSIONS.md` | One catalog of everything to add later, and when. |
 
 That's it out of the box. You build more skills as real, recurring needs show up. Start with `references/what-a-good-skill-looks-like.md`, and see `EXPANSIONS.md` for what to add and when.
@@ -45,7 +44,7 @@ Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](ht
 ├── AGENTS.md                ← Points Codex to CLAUDE.md and the skills
 ├── EXPANSIONS.md            ← Everything to add later, and when
 ├── LICENSE
-├── context/                 ← About you and your world: personalities, connections.md, intake.md (/onboard source)
+├── context/                 ← About you and your world: connections.md, intake.md (/onboard progress log)
 │                                + about-me, about-business, priorities, voice (created by /onboard)
 ├── knowledge/               ← The knowledge base — read its RULES.md first
 │   ├── log/                 ← Ground truth: what happened, daily files, append-only
