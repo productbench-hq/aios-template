@@ -101,28 +101,19 @@ Save company/product context in `context/about-business.md`; identity, role, and
 
 **Done when:** Available company and role context is confirmed or marked pending/skipped, with sources and uncertainties retained.
 
-### 4. How we work together
+### 4. How you work with me
 
-Show one short proposal, adapted to existing preferences:
+`CLAUDE.md` already holds the working rules under **How you work with me**: 8 rules plus how corrections become new rules. Sum them up in one plain sentence, adapted to existing preferences:
 
-> I'll think things through with you when you're exploring, get to work when you make a clear request, and keep replies clear and concise. I'll ask when it matters and push back when useful.
+> I'll keep replies short and answer first, think with you when you're exploring and just do it when you ask clearly, push back when I see a problem, and say what's checked versus my own view. When you correct me, I'll offer to save it as a rule.
 >
 > Anything you'd change?
 
-Keep the precise operating instructions in `CLAUDE.md`; do not make the user review a second checklist. Use these defaults, adjusted by their response:
+Apply changes by editing **How you work with me** in place: reword, remove or add a rule there. Never add a second collaboration section. Writing style goes to `context/voice.md`, not here. If skipped, or the same approach is already confirmed, leave the section as it is.
 
-- **Think with you:** When you're exploring, I'll help develop the idea before jumping to a finished answer.
-- **Get things done:** When you make a clear request, I'll do the work.
-- **Use judgment:** I'll make reasonable assumptions and ask when something important would change the result.
-- **Be candid:** I'll challenge weak assumptions, explain uncertainty, and avoid agreeing just to be agreeable.
-- **Keep it simple:** Short, clear replies by default. More detail when useful.
-- **Build on progress:** I'll keep track of agreed decisions and use your corrections without unnecessarily rewriting everything.
+Interpret the whole request; do not map phrases such as "I'd like to" or "Can you" to fixed modes. These preferences do not authorize external sends or unrelated tool changes.
 
-Save the agreed version under **How we work together** in `CLAUDE.md`. If skipped, retain existing preferences or mark the proposal as provisional. If the same approach has already been confirmed, skip this check-in.
-
-Interpret the whole request; do not map phrases such as "I'd like to" or "Can you" to fixed modes. These preferences do not authorize external sends or unrelated tool changes. Explain assumptions and verification when useful, without overwhelming the user.
-
-**Done when:** The approach is agreed or explicitly deferred, with existing preferences preserved.
+**Done when:** The approach is agreed or explicitly deferred, with existing preferences preserved, and `CLAUDE.md` has exactly one collaboration section.
 
 ### 5. Goals and priorities — optional
 
@@ -144,11 +135,13 @@ Ask: **Does this reflect what matters right now? Anything to change or add?** Sa
 
 Reconcile the files using the rules below. Then close briefly:
 
-> You're set. Whenever an answer feels off, tell me—for example, "shorter," "more casual," or "think this through with me first." I'll adjust. If you want that change to apply from now on, I'll update your preferences.
+> You're set. Whenever an answer feels off, tell me—for example, "shorter," "more casual," or "think this through with me first." I'll adjust, and offer to save it as a rule so it sticks.
 
 Do not add a writing test, knowledge demo, or first-task question. Preferences improve through real work. Follow clear standing-preference requests; for an ambiguous correction, adapt to the current task without silently making it permanent.
 
-**Done when:** Files match the agreed setup, deferred items are honest, and the closing explains how to make corrections later.
+Before closing, check `CLAUDE.md`: no `{{` is left, and there is exactly one collaboration section (**How you work with me**). Fix either before the closing message.
+
+**Done when:** Files match the agreed setup, deferred items are honest, the `CLAUDE.md` check passes, and the closing explains how to make corrections later.
 
 ## File updates
 
@@ -161,7 +154,7 @@ Create missing setup files even when steps are skipped; use short, honest defaul
 | `context/voice.md` | Agreed style and source pointers, or a labeled provisional neutral style. |
 | `context/priorities.md` | Goals by owner, distinct current priorities, or `Set later`. |
 | `context/connections.md` | Available tools with truthful status, mechanism, account/workspace, scope, and check dates. |
-| `CLAUDE.md` | Short context summaries, file pointers, and collaboration preferences. |
+| `CLAUDE.md` | Placeholders filled (table below); **How you work with me** edited in place. |
 
 - Invoking setup authorizes local onboarding writes. Save progress as you go; no final approval gate for the same agreed content.
 - `context/intake.md` records answers, source pointers, step status, and explicit skips. Do not fill it with private writing samples.
@@ -169,7 +162,16 @@ Create missing setup files even when steps are skipped; use short, honest defaul
 - Before changing an existing file, back it up under a unique `archive/intake-{timestamp}/` path, preserving its relative path. Back up each file once per run.
 - Preserve useful existing information, unrelated manual sections, knowledge rules, skills, and connection IDs/scopes. Add confirmed information; do not reset tools to disconnected or erase context because a step was skipped.
 - Record authentication status, never tokens or credentials. Access for setup is limited to the chosen purpose; record broader ongoing access only if established.
-- Fill `CLAUDE.md` placeholders with available facts, short summaries, and explicit unknowns. Use current goals and priorities without inventing a quarter or metric.
-- Add to **How we work together**: apply feedback immediately; save lasting changes when requested. Keep behavior preferences there and writing style in `context/voice.md`.
+- Fill `CLAUDE.md` placeholders with available facts, short summaries, and explicit unknowns. Use current goals and priorities without inventing a quarter or metric:
+
+  | Placeholder | Filled in step | With |
+  |---|---|---|
+  | `{{name}}` | 1 | First name |
+  | `{{voice_register_summary}}` | 2 | The agreed style in one line |
+  | `{{role_and_product}}` | 3 | Role and product/area, a few words |
+  | `{{about_me_and_product_summary}}` | 3 | 2–3 lines from `about-me.md` and `about-business.md` |
+  | `{{priorities}}` | 5 | Short bullets, or `Set later.` |
+
+- Keep behaviour preferences in **How you work with me** and writing style in `context/voice.md`. The correction loop in that section handles lasting changes after setup.
 - Verify each changed file against confirmed answers, source links, and existing settings. Read only relevant knowledge rules before source ingestion or logging.
 - A test run uses an isolated test workspace. Never overwrite an existing personal OS or personalize the public template checkout as part of a test.
