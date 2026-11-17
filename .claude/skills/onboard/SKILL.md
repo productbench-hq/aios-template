@@ -69,7 +69,7 @@ Propose the essence in plain language, for example:
 
 If there are no examples, offer **casual, neutral, or formal**, or let them leave the style for later. Keep existing guidance if skipped. A fresh setup with no choice uses a clearly labeled provisional neutral style.
 
-Save the agreed style in `context/voice.md`. Keep source links and the sample's purpose, not a dump of private messages. Store supplied source material according to `knowledge/RULES.md` where applicable.
+Save the agreed style in `context/voice.md`. Keep source links and the sample's purpose, not a dump of private messages. Don't ingest writing samples into `knowledge/sources/`.
 
 Carry useful company, role, or product clues into the next step as proposals. Do not silently adopt them as personal facts or use a style example as authority for internal goals.
 
@@ -159,7 +159,7 @@ Create missing setup files even when steps are skipped; use short, honest defaul
 - Invoking setup authorizes local onboarding writes. Save progress as you go; no final approval gate for the same agreed content.
 - `context/intake.md` records answers, source pointers, step status, and explicit skips. Do not fill it with private writing samples.
 - Update only affected facts and sections. An unchanged rerun makes no content changes or new backups.
-- Before changing an existing file, back it up under a unique `archive/intake-{timestamp}/` path, preserving its relative path. Back up each file once per run.
+- Before changing a file that holds the user's own content, back it up under a unique `archive/intake-{timestamp}/` path, preserving its relative path. Back up each file once per run. Skip untouched template files (`CLAUDE.md` with all its `{{placeholders}}`, the intake stub, the empty connections table): there's nothing to lose.
 - Preserve useful existing information, unrelated manual sections, knowledge rules, skills, and connection IDs/scopes. Add confirmed information; do not reset tools to disconnected or erase context because a step was skipped.
 - Record authentication status, never tokens or credentials. Access for setup is limited to the chosen purpose; record broader ongoing access only if established.
 - Fill `CLAUDE.md` placeholders with available facts, short summaries, and explicit unknowns. Use current goals and priorities without inventing a quarter or metric:
@@ -173,5 +173,5 @@ Create missing setup files even when steps are skipped; use short, honest defaul
   | `{{priorities}}` | 5 | Short bullets, or `Set later.` |
 
 - Keep behaviour preferences in **How you work with me** and writing style in `context/voice.md`. The correction loop in that section handles lasting changes after setup.
-- Verify each changed file against confirmed answers, source links, and existing settings. Read only relevant knowledge rules before source ingestion or logging.
+- Verify each changed file against confirmed answers, source links, and existing settings. Onboarding ingests nothing into `knowledge/sources/`: writing samples and website pages stay as links in the context files.
 - A test run uses an isolated test workspace. Never overwrite an existing personal OS or personalize the public template checkout as part of a test.

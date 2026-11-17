@@ -19,7 +19,7 @@ Rules: `knowledge/RULES.md` — read it before the first task that touches memor
 
 - Session start: read `knowledge/index.md`.
 - New material (a transcript, a doc, an export) → ingest it into `knowledge/sources/` and cite it — never keep it only in your head. The handover is the decision; no confirmation.
-- Log to `knowledge/log/YYYY-MM-DD.md` unprompted, one block per write moment. Append-only.
+- Log to `knowledge/log/YYYY-MM-DD.md` unprompted, one block per write moment. Append-only. Exception: when a skill drafts a log line and asks for my yes, the skill decides. Never log that line another way.
 - Never edit a filed source or a past log entry, or a page outside a compile. Fixes go through the log — see `knowledge/RULES.md`.
 
 ## Where things live
@@ -28,7 +28,7 @@ Rules: `knowledge/RULES.md` — read it before the first task that touches memor
 - `knowledge/` — the knowledge base: log, sources, pages, index, and its rules (`RULES.md`). You read `pages/` and hand material over; the rest is the machine's.
 - `EXPANSIONS.md` — everything you can add later: knowledge base extensions (install by listing in `knowledge/RULES.md`) and new folders, with when to add each.
 - `references/` — read when a task needs it, never by default: API guides, SOPs, skill guides.
-- `archive/` — old material, moved here by you (and by the system, once the `audit-archive` extension is installed). Never deleted.
+- `archive/` — old material, moved here by you, by `/onboard` (backups of files it changes), and by the system once the `audit-archive` extension is installed. Never deleted.
 
 ## About
 
