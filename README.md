@@ -19,8 +19,6 @@ The kit personalizes itself to you via an `/onboard` interview, then grows in tw
 
 That's it out of the box. You build more skills as real, recurring needs show up. Start with `references/what-a-good-skill-looks-like.md`, and see `EXPANSIONS.md` for what to add and when.
 
-Want ready-made skills and the commands we use daily? See our [PM AI Toolkit](https://github.com/productbench-hq/pm-ai-toolkit).
-
 ---
 
 ## Quick start
