@@ -26,6 +26,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 | [`/catching-up`](.claude/skills/catching-up/SKILL.md) | Reads what changed in your connected tools since you last looked: what needs you, what's out of date, with fixes for a yes | You start a work session and want to know what you missed | One connected tool |
 | [`/meetings-to-issues`](.claude/skills/meetings-to-issues/SKILL.md) | Turns meeting notes into tracker issues, logged decisions and parked ideas. Checks for duplicates and creates nothing until you say yes | A meeting just ended and its next steps need to land in Linear, Jira or Asana | A connected tracker. Walks you through the rest on first run |
 | [`/decision-review`](.claude/skills/decision-review/SKILL.md) | Reviews a decision before you commit: the assumptions you haven't said out loud, checked against your evidence, with the cheapest test for each. Logs your verdict and a date to check back | You're about to commit to a decision that feels obvious, and being wrong would cost you | None |
+| [`/go-deeper`](.claude/skills/go-deeper/SKILL.md) | Rewrites a task into the version a top professional would do: their raw material, their methods, and an outside check that the result is right | Your AI gives you the obvious answer and you want the expert one | None |
 
 You start a skill by typing its name, e.g. `/decision-review`.
 
@@ -71,7 +72,7 @@ New skills land here. **[Get them by email →](https://buttondown.com/productbe
 │   └── what-a-good-skill-looks-like.md  ← How to build a skill: principles, skeleton, checklist
 ├── archive/                 ← Old material and /onboard backups. Don't delete, move here.
 ├── .claude/hooks/           ← Session-start nudge (catch-up, or resume /onboard)
-└── .claude/skills/          ← /onboard, /catching-up, /meetings-to-issues, /decision-review + yours
+└── .claude/skills/          ← /onboard, /catching-up, /meetings-to-issues, /decision-review, /go-deeper + yours
 ```
 
 The design premise in one line: **you keep the synthesis, not the pile of transcripts.** Every claim in `pages/` cites its evidence in `log/` or `sources/`. Full rules in `knowledge/RULES.md`.
