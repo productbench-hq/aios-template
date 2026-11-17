@@ -10,7 +10,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 
 | Piece | What it is |
 |---|---|
-| Skills | Four ready-made skills, listed below. Build your own as needs show up. |
+| Skills | Five ready-made skills, listed below. Build your own as needs show up. |
 | Working rules | `CLAUDE.md` holds 8 concrete rules for how the AI works with you: answer first, say it once, plain English, push back early, and more. When you correct it, it offers to save the correction as a new rule, so it gets better the more you use it. |
 | `knowledge/` | The knowledge base: a daily log, raw sources, and cited pages. Rules in `knowledge/RULES.md`. |
 | Session-start nudge | In Claude Code, offers a catch-up when the last one is over 4 hours old, or to resume `/onboard` if you stopped halfway. |
