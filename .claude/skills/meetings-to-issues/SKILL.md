@@ -22,7 +22,7 @@ Your team, people, projects and destinations live in [setup.md](setup.md), next 
 
 1. **Check setup.** Read `setup.md`. If no tracker is connected to Claude, stop and say so. If any field is empty:
    a. Look up what the tracker can tell you: team, users, projects, labels, states. Note the tool names used for each job.
-   b. Ask the user, in one message, for what the tracker can't tell you: the names people use for each other in meetings, what each project is for, and where decisions and parked ideas should go. Suggest `knowledge/log.md` for both if that file exists.
+   b. Ask the user, in one message, for what the tracker can't tell you: the names people use for each other in meetings, what each project is for, and where decisions and parked ideas should go. Suggest today's log file, `knowledge/log/YYYY-MM-DD.md`, for both: decisions as `decision:` lines, ideas as `note:` lines, in one block per `knowledge/RULES.md`.
    c. Show the filled `setup.md`. Write it on a yes.
    Done when: every field in `setup.md` is filled or marked "none".
 
@@ -77,7 +77,7 @@ Your team, people, projects and destinations live in [setup.md](setup.md), next 
 
 ## Example
 
-Hivelist product sync, 2026-09-10. Tracker: Linear. Decisions and ideas go to `knowledge/log.md`.
+Hivelist product sync, 2026-09-10. Tracker: Linear. Decisions and ideas go to today's log, `knowledge/log/2026-09-10.md`.
 
 **Input (Granola summary):**
 ```
@@ -101,8 +101,8 @@ Open questions
 | 2 | Confirm November export deadline with Nordhafen | Jonas | Export & reporting | | Todo | |
 | 3 | Share export mockups with design | — | Export & reporting | | Todo | No owner stated. Due Friday |
 
-- **Decisions** → `knowledge/log.md`: export ships before notifications.
-- **Ideas to park** → `knowledge/log.md`: should export include archived tasks?
+- **Decisions** → today's log: export ships before notifications.
+- **Ideas to park** → today's log: should export include archived tasks?
 - **Left out:** none.
 
 Create as-is, or edit first?
@@ -115,5 +115,5 @@ Create as-is, or edit first?
 > - Created HIV-57: Confirm November export deadline with Nordhafen (Jonas)
 > - Created HIV-58: Share export mockups with design (Lena)
 > - Skipped: #1, covered by HIV-42
-> - Decision logged in `knowledge/log.md`: export ships before notifications
-> - Idea parked in `knowledge/log.md`: should export include archived tasks?
+> - Decision logged in `knowledge/log/2026-09-10.md`: export ships before notifications
+> - Idea parked in `knowledge/log/2026-09-10.md`: should export include archived tasks?

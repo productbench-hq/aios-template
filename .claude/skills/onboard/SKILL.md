@@ -25,7 +25,7 @@ description: Set up or refresh a personal AIOS through a short guided conversati
 
 ### 1. Start or resume
 
-Read `CLAUDE.md`, `context/intake.md`, and existing context files in the target workspace. Preserve personal edits, verified connections, access scopes, and voice guidance. Older Q1–Q7 intakes are valid input; use their answers without repeating the old interview.
+Read `CLAUDE.md`, `context/intake.md`, and existing context files in the target workspace. Preserve personal edits, verified connections, access scopes, and voice guidance.
 
 For a fresh setup, say:
 
@@ -79,9 +79,9 @@ Carry useful company, role, or product clues into the next step as proposals. Do
 
 Start with existing context and clues from supplied material. Propose likely company, role, or product context with its basis. For example:
 
-> You appear to be Productbench's co-founder, working across its training and AI offerings. Is that right?
+> You appear to be a product manager at Acme, working on its mobile app. Is that right?
 
-Use that example only when the actual evidence supports it. If the user says "guess", make a grounded proposal and ask for correction; do not invent missing personal facts. A co-founder title alone does not establish company-wide responsibility.
+Use that example only when the actual evidence supports it. If the user says "guess", make a grounded proposal and ask for correction; do not invent missing personal facts. A job title alone does not establish what someone owns.
 
 When a website is supplied, read the homepage and at most two more pages (about, product or pricing) before asking follow-up questions they could answer. Keep it light: no wider web search during onboarding. If the site is unavailable, use supplied context and name the gap; continue onboarding. Offer deeper company research later, as a normal task.
 

@@ -41,5 +41,5 @@ Anyone not listed stays unassigned and gets flagged.
 
 | What | Where | How to add |
 |---|---|---|
-| Decisions | <!-- e.g. knowledge/log.md, a doc link --> | <!-- e.g. append "- decision: <text> — <meeting>, <date>" --> |
-| Parked ideas | | |
+| Decisions | `knowledge/log/YYYY-MM-DD.md` (today's log) | One block per `knowledge/RULES.md`: `## HH:MM — meeting-<name>`, then `- decision: <text> — <who>` |
+| Parked ideas | `knowledge/log/YYYY-MM-DD.md` (today's log) | Same block: `- note: idea: <text> — <who>` |

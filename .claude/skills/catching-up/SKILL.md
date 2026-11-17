@@ -25,7 +25,7 @@ Start = the timestamp in `.claude/state/last-catch-up`; 3 days ago if the file i
 
 ### 2. Gather
 
-Read `context/connections.md`. Every row whose mechanism isn't `not yet connected` is a source. If a `references/{tool}-api.md` exists for it, follow that guide.
+Read `context/connections.md`. Every row whose mechanism isn't `not yet connected` is a source, unless its Scope limits it to another purpose (e.g. `writing style only`). Skip those and list them in one line at the end of the report, so the user can widen the scope. If a `references/{tool}-api.md` exists for it, follow that guide.
 
 One read-only pass per source:
 

@@ -16,7 +16,7 @@ Pick a task you've done **3+ times** and will do again. One skill, one job.
 
 ### 2. Scope it like an MVP
 Write down what it does, and what it doesn't do. Park the rest as v2.
-- `syncing-specs` handles one doc type and one source (Slack). Other doc types and email are named as v2, not built.
+- `meetings-to-issues` turns pasted notes into issues. Fetching meetings on its own and updating existing issues are named as out of scope, not built.
 - **Test:** is there a "Not in scope" line?
 
 ### 3. You pull the trigger
@@ -30,7 +30,7 @@ Numbered steps in order. Every step ends on **done when**: a condition you could
 - Bad: "Review the backlog."
 - Good: "Every open issue is tagged keep, drop or later."
 - Templates, definitions and lookup tables go in a separate **reference** section, not mixed into the steps.
-- **Before anything leaves the chat** (sends, creates, edits a shared doc), one step shows you the draft and waits for your **yes**. `granola-to-linear`: map → propose → confirm → create.
+- **Before anything leaves the chat** (sends, creates, edits a shared doc), one step shows you the draft and waits for your **yes**. `meetings-to-issues`: map → propose → confirm → create.
 - **Test:** could the AI tell "done" from "not done" at every step? Can it change anything outside the chat before you approve?
 
 ### 5. Build, test, iterate

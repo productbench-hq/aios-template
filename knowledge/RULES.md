@@ -62,8 +62,6 @@ Record what happened and when. Everything else is compiled from this.
 | `correction:` | a recorded entry was wrong — `replacing [log:…]`                                                                               |
 | `sys:`        | bookkeeping: `read:` `ingested:` `created:` `regenerated:` `[core]`                                                            |
 
-
-- The header is the citation address: [log:YYYY-MM-DD HH:MM]
 - Every closed task ends with a `done:`.
 - `grep -v sys:` is the pure journal.
 
@@ -133,9 +131,9 @@ Deciding what is durable at write time. Mitigation: low bar for the log, high ba
 
 Three customer interviews come in. The PM asks "how price-sensitive are our customers?" after the first and again after the third. The page gets created on the second ask — that's the recurrence bar being met.
 
-`knowledge/log/YYYY-MM-DD.md`:
+`knowledge/log/2026-09-08.md`:
 ```
-## 2026-09-08 14:20 — customer-interviews
+## 14:20 — customer-interviews
 - sys: ingested: customers/int-01-maria.md
 - note: pricing came up unprompted — Maria, interview
 - sys: ingested: customers/int-02-devon.md
@@ -169,9 +167,9 @@ updated_at: 2026-09-08 14:20
 Pricing comes up unprompted in most mid-market interviews [1] [3]. Enterprise buyers raise SSO and access control before price — pricing sensitivity there is inferred, not stated directly [2].
 
 ## Sources
-[1] source:customers/int-01-maria
-[2] source:customers/int-02-devon (inferred)
-[3] source:customers/int-03-priya
+[1] source:int-01-maria
+[2] source:int-02-devon (inferred)
+[3] source:int-03-priya
 ```
 
 Two more interviews later mention pricing — the page's answer gets edited, not recreated: the claim updates, a new citation gets added, `updated_at` moves forward.

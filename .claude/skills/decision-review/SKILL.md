@@ -1,6 +1,6 @@
 ---
 name: decision-review
-description: Reviews a decision before the user commits to it. Finds the assumptions they haven't said out loud, checks them against the evidence with an agent that never sees their reasoning, proposes the cheapest test for each, and records their verdict and a date to check back. Use when asked for a decision review or a gut check, to stress-test a decision or plan, or to check what a decision rests on; or run /decision-review.
+description: Reviews a decision before the user commits to it. Finds the assumptions they haven't said out loud, checks them against the evidence with an agent that never sees their reasoning, proposes the cheapest test for each, and records their verdict and a date to check back. Use when asked for a decision review, to stress-test a decision or plan, or to check what a decision rests on; or run /decision-review.
 disable-model-invocation: true
 ---
 
@@ -91,8 +91,8 @@ A card the user adds gets its check and pass mark shown in one line for a yes. D
 
 ### 4. Wrap up
 
-Reply with the doc link, verdict and check-back date. If `setup.md` names a decision log or reminder tool, draft the entry and reminder; write them on a yes. If not, ask once: "Want a decision log and check-back reminders?" On a yes, fill `setup.md`, create the log if missing, and log this decision. Then stop: running the checks is the user's call.
+Reply with the doc link, verdict and check-back date. Draft a `decision:` line with the verdict, the doc name and the check-back date for today's log (`knowledge/log/YYYY-MM-DD.md`, format per `knowledge/RULES.md`); add it on a yes. If `setup.md` names a reminder tool, draft the reminder too. If not, ask once: "Want a check-back reminder, as a calendar event or a tracker issue?" On a yes, fill `setup.md` and create it. Then stop: running the checks is the user's call.
 
 ## Check-back
 
-When the user brings a result, or a reminder fires: compare it with the card's pass mark (passed, failed, no result yet). Append `## Check-back <date>` with the result, which outcome applies, and whether the verdict holds; propose, the user decides. With a log, draft a `Check-back: <title>` entry and add it on a yes; never edit past entries. No result yet: propose a new date.
+When the user brings a result, or a reminder fires: compare it with the card's pass mark (passed, failed, no result yet). Append `## Check-back <date>` with the result, which outcome applies, and whether the verdict holds; propose, the user decides. Draft a `decision: Check-back: <title>` line for today's log and add it on a yes; never edit past entries. No result yet: propose a new date.
