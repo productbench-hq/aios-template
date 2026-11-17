@@ -38,7 +38,7 @@ One read-only pass per source:
 | Meeting intelligence | New meeting notes or transcripts in the window. |
 | Product metrics, stakeholder & user interactions | Only if a guide in `references/` says what "changed" means for that tool. Otherwise skip, and say so once. |
 
-Done when every connected source has been read, or a failing one is named in the report. No sources connected → say "Nothing connected yet. Pick one tool in `context/connections.md` and wire it up first.", run step 6 (stamp) so the hook doesn't ask again for 4 hours, and stop.
+Done when every connected source has been read, or a failing one is named in the report. No sources → if nothing is connected, say "Nothing connected yet. Pick one tool in `context/connections.md` and wire it up first."; if tools are connected but all scoped to another purpose, say "No tool is scoped for catch-ups (skipped: <tools>). Widen one in `context/connections.md`?" Then run step 6 (stamp) so the hook doesn't ask again for 4 hours, and stop.
 
 ### 3. Match
 

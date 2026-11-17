@@ -9,14 +9,14 @@ MAX_AGE=$((4 * 60 * 60))
 
 # Onboarding not finished (CLAUDE.md still has placeholders): offer to resume it instead.
 if grep -q "{{" "$ROOT/CLAUDE.md" 2>/dev/null; then
-  if [ -f "$ROOT/context/about-me.md" ] || [ -f "$ROOT/context/voice.md" ]; then
+  if [ -f "$ROOT/context/about-me.md" ] || [ -f "$ROOT/context/voice.md" ] || ! grep -q "Not started yet" "$ROOT/context/intake.md" 2>/dev/null; then
     echo "Onboarding isn't finished (CLAUDE.md still has {{placeholders}}). Before the user's request, offer once to resume /onboard where it left off."
   fi
   exit 0
 fi
 
 if [ -f "$STATE" ]; then
-  last=$(stat -f %m "$STATE" 2>/dev/null || stat -c %Y "$STATE" 2>/dev/null)
+  last=$(stat -c %Y "$STATE" 2>/dev/null || stat -f %m "$STATE" 2>/dev/null)
   age=$(( $(date +%s) - last ))
   [ "$age" -lt "$MAX_AGE" ] && exit 0
   echo "Last catch-up: $(cat "$STATE"). Run the catching-up skill first, then handle the user's request."

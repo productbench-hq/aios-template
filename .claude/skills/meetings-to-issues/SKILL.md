@@ -22,7 +22,7 @@ Your team, people, projects and destinations live in [setup.md](setup.md), next 
 
 1. **Check setup.** Read `setup.md`. If no tracker is connected to Claude, stop and say so. If any field is empty:
    a. Look up what the tracker can tell you: team, users, projects, labels, states. Note the tool names used for each job.
-   b. Ask the user, in one message, for what the tracker can't tell you: the names people use for each other in meetings, what each project is for, and where decisions and parked ideas should go. Suggest today's log file, `knowledge/log/YYYY-MM-DD.md`, for both: decisions as `decision:` lines, ideas as `note:` lines, in one block per `knowledge/RULES.md`.
+   b. Ask the user, in one message, for what the tracker can't tell you: the names people use for each other in meetings, what each project is for, Where decisions and parked ideas go is pre-filled (today's log); just confirm it, and change it only if the user asks.
    c. Show the filled `setup.md`. Write it on a yes.
    Done when: every field in `setup.md` is filled or marked "none".
 

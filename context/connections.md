@@ -12,7 +12,7 @@ Registry of every system your AIOS can reach. Filled by `/onboard` and expanded 
 | 6 | Meeting intelligence | — | not yet connected | — | — | — | — |
 | 7 | Knowledge / files | — | not yet connected | — | — | — | — |
 
-**Scope** is what the AI may read there, and for what: e.g. `5 sent emails, writing style only` or `catch-ups: all project channels`. `/catching-up` only scans tools whose scope includes catch-ups.
+**Scope** is what the AI may read there, and for what: e.g. `5 sent emails, writing style only` or `catch-ups: all project channels`. `/catching-up` scans every connected tool unless its Scope limits it to another purpose.
 
 **Mechanism options:** `connector` (built-in, a few clicks in your AI app's settings — try this first), `mcp` (MCP server), `script` (Python/Bash hitting an API, in `scripts/`), `export` (CSV/JSON dump pipeline), `key+ref` (`.env` key + `references/{tool}-api.md` guide), `not yet connected`.
 

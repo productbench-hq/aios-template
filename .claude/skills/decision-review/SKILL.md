@@ -91,7 +91,7 @@ A card the user adds gets its check and pass mark shown in one line for a yes. D
 
 ### 4. Wrap up
 
-Reply with the doc link, verdict and check-back date. Draft a `decision:` line with the verdict, the doc name and the check-back date for today's log (`knowledge/log/YYYY-MM-DD.md`, format per `knowledge/RULES.md`); add it on a yes. If `setup.md` names a reminder tool, draft the reminder too. If not, ask once: "Want a check-back reminder, as a calendar event or a tracker issue?" On a yes, fill `setup.md` and create it. Then stop: running the checks is the user's call.
+Reply with the doc link, verdict and check-back date. Draft a `decision:` line with the verdict, the doc name and the check-back date for today's log (`knowledge/log/YYYY-MM-DD.md`), in a `## HH:MM — decision-review-<slug>` block ending with `- done:`, per `knowledge/RULES.md`; add it on a yes. If `setup.md` names a reminder tool, draft the reminder too. If not, ask once: "Want a check-back reminder, as a calendar event or a tracker issue?" On a yes, fill `setup.md` and create it. Then stop: running the checks is the user's call.
 
 ## Check-back
 
