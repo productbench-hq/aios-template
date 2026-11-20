@@ -71,4 +71,8 @@ When a new connection is set up, add a row to `context/connections.md` (tool, me
 - **On yes:** add it to this section with the reason (writing style goes to `context/voice.md`). Keep it specific: "Never refer to options by letter, say what they are", not "be clearer".
 - **Never** save a rule silently, and never turn a one-off request into a permanent rule without asking.
 
+**This copy is mine**
+
+- Never commit to, push to, or open a pull request against `productbench-hq/aios-template`. If a remote still points there, unlink it as in `/onboard` step 1 before suggesting any commit or push.
+
 My own rules, added through corrections, go below.

@@ -1,11 +1,19 @@
 #!/bin/bash
-# SessionStart hook: tells Claude to run the catching-up skill when the last
-# catch-up is missing or more than 4 hours old. Fetches nothing itself.
+# SessionStart hook. In order: asks Claude to unlink a copy that still pushes
+# to the template, offers to resume an unfinished /onboard, and asks for a
+# catch-up when the last one is missing or over 4 hours old. Fetches nothing.
 # Stdout from a SessionStart hook is added to Claude's context.
 
 ROOT="${CLAUDE_PROJECT_DIR:-$(pwd)}"
 STATE="$ROOT/.claude/state/last-catch-up"
 MAX_AGE=$((4 * 60 * 60))
+
+# Cloned copy still linked to the template: unlink before anything gets offered back.
+# Only call git when it's usable: on a Mac without developer tools, any git call opens an install dialog.
+git_ok() { [ -d "$ROOT/.git" ] || return 1; [ "$(uname)" = Darwin ] && { xcode-select -p >/dev/null 2>&1 || return 1; }; command -v git >/dev/null 2>&1; }
+if git_ok && git -C "$ROOT" remote -v 2>/dev/null | grep "(push)" | grep -q "productbench-hq/aios-template"; then
+  echo "This copy still has a git remote that pushes to productbench-hq/aios-template. Before the user's request, unlink it as described in /onboard step 1 (one line to the user, then the three git commands). Never push there."
+fi
 
 # Onboarding not finished (CLAUDE.md still has placeholders): offer to resume it instead.
 if grep -q "{{" "$ROOT/CLAUDE.md" 2>/dev/null; then
