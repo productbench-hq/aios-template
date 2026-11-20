@@ -87,15 +87,14 @@ The design premise in one line: **you keep the synthesis, not the pile of transc
 
 For an AI agent asked to set up this kit. Do the work; keep the user out of the terminal.
 
-1. **Folder:** `~/Documents/my-aios`, unless the user named another place. Never a temporary folder. If it exists and isn't empty, ask first.
+1. **Folder:** `~/Documents/my-aios`, unless the user named another place (then use that path in the commands below). Never a temporary folder. If it exists and isn't empty, ask first.
 2. **Download.** Check git without triggering an install prompt: on macOS, git is usable only if `xcode-select -p` succeeds; elsewhere, `command -v git`.
    - Git usable: clone, then unlink the copy so the user's setup is never offered back to this repo:
      ```bash
      git clone https://github.com/productbench-hq/aios-template.git ~/Documents/my-aios
-     cd ~/Documents/my-aios
-     git remote rename origin upstream
-     git remote set-url --push upstream DISABLED
-     git branch --unset-upstream
+     git -C ~/Documents/my-aios remote rename origin upstream
+     git -C ~/Documents/my-aios remote set-url --push upstream DISABLED
+     git -C ~/Documents/my-aios branch --unset-upstream 2>/dev/null || true
      ```
    - Otherwise don't call git (on macOS it opens an install dialog). Download the archive:
      ```bash
