@@ -38,9 +38,13 @@ New skills land here. **[Get them by email →](https://buttondown.com/productbe
 
 ## Quick start
 
-1. **Get your own copy.** Any of these works: **Use this template → Create a new repository** (set it to **Private**), `git clone`, or **Code → Download ZIP** if you don't use GitHub. If you clone, `/onboard` unlinks your copy from this repo in its first step, so your setup never gets offered back to Productbench. You can still pull new skills with `git pull upstream main`. Don't fork: a fork of this public repo is public, and so would be everything you add to it.
-2. **Open it and run `/onboard`.**
-   - *Claude desktop app:* unzip the folder somewhere you'll find again (e.g. `Documents`). Open the app, switch to the **Code** tab, start a new session and choose the folder. Type `/onboard` and press Enter.
+1. **Let your AI set it up.** Open Claude Code (in the Claude desktop app: the **Code** tab) or Codex, in any folder, and paste:
+
+   > Set up my AIOS from github.com/productbench-hq/aios-template in my Documents folder. Follow the agent setup steps in its README.
+
+   It puts the kit in `Documents/my-aios` and tells you how to start. Prefer to do it yourself? **Use this template → Create a new repository** (set it to **Private**), `git clone`, or **Code → Download ZIP**. Don't fork: a fork of this public repo is public, and so would be everything you add to it.
+2. **Open it and run `/onboard`.** Start a **new** session in the `my-aios` folder: the kit's skills and rules only load in a session opened on that folder.
+   - *Claude desktop app:* **Code** tab → new session → choose the folder. Type `/onboard` and press Enter.
    - *Claude Code in a terminal:* open the folder and type `/onboard`.
    - *Codex:* open the folder and say "run onboard".
 
@@ -76,6 +80,30 @@ New skills land here. **[Get them by email →](https://buttondown.com/productbe
 ```
 
 The design premise in one line: **you keep the synthesis, not the pile of transcripts.** Every claim in `pages/` cites its evidence in `log/` or `sources/`. Full rules in `knowledge/RULES.md`.
+
+---
+
+## Agent setup steps
+
+For an AI agent asked to set up this kit. Do the work; keep the user out of the terminal.
+
+1. **Folder:** `~/Documents/my-aios`, unless the user named another place. Never a temporary folder. If it exists and isn't empty, ask first.
+2. **Download.** Check git without triggering an install prompt: on macOS, git is usable only if `xcode-select -p` succeeds; elsewhere, `command -v git`.
+   - Git usable: clone, then unlink the copy so the user's setup is never offered back to this repo:
+     ```bash
+     git clone https://github.com/productbench-hq/aios-template.git ~/Documents/my-aios
+     cd ~/Documents/my-aios
+     git remote rename origin upstream
+     git remote set-url --push upstream DISABLED
+     git branch --unset-upstream
+     ```
+   - Otherwise don't call git (on macOS it opens an install dialog). Download the archive:
+     ```bash
+     mkdir -p ~/Documents/my-aios
+     curl -fsSL https://codeload.github.com/productbench-hq/aios-template/tar.gz/main | tar -xz -C ~/Documents/my-aios --strip-components=1
+     ```
+3. **Don't** run `/onboard` in this session, create a GitHub repo, or fork. Onboarding needs a session opened on the new folder.
+4. **Tell the user, in plain words:** where the folder is, then how to start: start a new session in that folder (Claude desktop app: **Code** tab → new session → choose `my-aios`; Codex: open the folder), and type `/onboard` (Codex: say "run onboard"). About 15 minutes; they can skip anything. Mention that on a Mac, Finder hides `.claude` (Cmd+Shift+. shows it).
 
 ---
 
