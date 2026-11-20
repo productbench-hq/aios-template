@@ -38,7 +38,7 @@ New skills land here. **[Get them by email →](https://buttondown.com/productbe
 
 ## Quick start
 
-1. **Get your own copy.** Click **Use this template → Create a new repository** and set it to **Private**. Your answers and content stay in your copy; nothing goes back to Productbench. Don't fork: a fork of this public repo is public too. No GitHub account? **Code → Download ZIP** works too.
+1. **Get your own copy.** Any of these works: **Use this template → Create a new repository** (set it to **Private**), `git clone`, or **Code → Download ZIP** if you don't use GitHub. If you clone, `/onboard` unlinks your copy from this repo in its first step, so your setup never gets offered back to Productbench. You can still pull new skills with `git pull upstream main`. Don't fork: a fork of this public repo is public, and so would be everything you add to it.
 2. **Open it and run `/onboard`.**
    - *Claude desktop app:* unzip the folder somewhere you'll find again (e.g. `Documents`). Open the app, switch to the **Code** tab, start a new session and choose the folder. Type `/onboard` and press Enter.
    - *Claude Code in a terminal:* open the folder and type `/onboard`.

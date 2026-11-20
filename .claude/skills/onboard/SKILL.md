@@ -27,6 +27,20 @@ description: Set up or refresh a personal AIOS through a short guided conversati
 
 Read `CLAUDE.md`, `context/intake.md`, and existing context files in the target workspace. Preserve personal edits, verified connections, access scopes, and voice guidance.
 
+**Make the copy theirs.** If the folder is a git repo and a remote still pushes to `productbench-hq/aios-template` (the `(push)` lines of `git remote -v`), the user cloned the template. Their setup must not be offered back to it. Say one line, for example:
+
+> This copy is still linked to Productbench's template. I'll unlink it so it's fully yours. You can still pull new skills from us later.
+
+Then run, using the actual remote name if it isn't `origin`:
+
+```bash
+git remote rename origin upstream
+git remote set-url --push upstream DISABLED
+git branch --unset-upstream 2>/dev/null || true
+```
+
+Pulling new skills later: `git pull upstream main`. If they want a backup, offer to connect their own **private** repo as `origin`; never suggest a fork, because a fork of a public repo is public. No remote, a ZIP download, or a copy already unlinked: say nothing.
+
 For a fresh setup, say:
 
 > Let's make this AI yours. Your AIOS gives your AI context about you and your work, so it can help in a way that suits you.
