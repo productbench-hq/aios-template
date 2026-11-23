@@ -10,7 +10,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 
 | Piece | What it is |
 |---|---|
-| Skills | Six ready-made skills, listed below. Build your own as needs show up. |
+| Skills | Seven ready-made skills, listed below. Build your own as needs show up. |
 | Working rules | `CLAUDE.md` holds 8 concrete rules for how the AI works with you: answer first, say it once, plain English, push back early, and more. When you correct it, it offers to save the correction as a new rule, so it gets better the more you use it. |
 | `knowledge/` | The knowledge base: a daily log, raw sources, and cited pages. Rules in `knowledge/RULES.md`. |
 | Session-start nudge | In Claude Code, offers a catch-up when the last one is over 4 hours old, or to resume `/onboard` if you stopped halfway. |
@@ -28,6 +28,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 | [`/meetings-to-issues`](.claude/skills/meetings-to-issues/SKILL.md) | Turns meeting notes into tracker issues, logged decisions and parked ideas. Checks for duplicates and creates nothing until you say yes | A meeting just ended and its next steps need to land in Linear, Jira or Asana | A connected tracker. Walks you through the rest on first run |
 | [`/decision-review`](.claude/skills/decision-review/SKILL.md) | Reviews a decision before you commit: the assumptions you haven't said out loud, checked against your evidence, with the cheapest test for each. Logs your verdict and a date to check back | You're about to commit to a decision that feels obvious, and being wrong would cost you | None |
 | [`/go-deeper`](.claude/skills/go-deeper/SKILL.md) | Rewrites a task into the version a top professional would do: their raw material, their methods, and an outside check that the result is right | Your AI gives you the obvious answer and you want the expert one | None |
+| [`/writing-with-intent`](.claude/skills/writing-with-intent/SKILL.md) | Interviews you about who you write for, what they get, what you believe, and what you'd never publish or write. Saves it as your writing intent, so AI drafts are written for someone, not just about something | Your AI drafts are fluent but could be anyone's, and you write under your own name | None |
 
 You start a skill by typing its name, e.g. `/decision-review`.
 
