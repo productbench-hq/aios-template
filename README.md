@@ -10,7 +10,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 
 | Piece | What it is |
 |---|---|
-| Skills | Five ready-made skills, listed below. Build your own as needs show up. |
+| Skills | Six ready-made skills, listed below. Build your own as needs show up. |
 | Working rules | `CLAUDE.md` holds 8 concrete rules for how the AI works with you: answer first, say it once, plain English, push back early, and more. When you correct it, it offers to save the correction as a new rule, so it gets better the more you use it. |
 | `knowledge/` | The knowledge base: a daily log, raw sources, and cited pages. Rules in `knowledge/RULES.md`. |
 | Session-start nudge | In Claude Code, offers a catch-up when the last one is over 4 hours old, or to resume `/onboard` if you stopped halfway. |
@@ -22,6 +22,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 
 | Skill | What it does | Use it when | Setup |
 |---|---|---|---|
+| [`/understand`](.claude/skills/understand/SKILL.md) | Walks through a document one thought at a time. Lets you question the evidence, add context, and carry changes into a revised conclusion | You need to understand a document before deciding or taking ownership | None |
 | [`/onboard`](.claude/skills/onboard/SKILL.md) | Sets up your AIOS: your name, writing style, company and role, how you work together, optional goals. Skip anything. | You just got the kit, or your role changed | None |
 | [`/catching-up`](.claude/skills/catching-up/SKILL.md) | Reads what changed in your connected tools since you last looked: what needs you, what's out of date, with fixes for a yes | You start a work session and want to know what you missed | One connected tool |
 | [`/meetings-to-issues`](.claude/skills/meetings-to-issues/SKILL.md) | Turns meeting notes into tracker issues, logged decisions and parked ideas. Checks for duplicates and creates nothing until you say yes | A meeting just ended and its next steps need to land in Linear, Jira or Asana | A connected tracker. Walks you through the rest on first run |
@@ -76,7 +77,7 @@ New skills land here. **[Get them by email →](https://buttondown.com/productbe
 │   └── what-a-good-skill-looks-like.md  ← How to build a skill: principles, skeleton, checklist
 ├── archive/                 ← Old material and /onboard backups. Don't delete, move here.
 ├── .claude/hooks/           ← Session-start nudge (catch-up, or resume /onboard)
-└── .claude/skills/          ← /onboard, /catching-up, /meetings-to-issues, /decision-review, /go-deeper + yours
+└── .claude/skills/          ← /onboard, /catching-up, /meetings-to-issues, /decision-review, /go-deeper, /understand + yours
 ```
 
 The design premise in one line: **you keep the synthesis, not the pile of transcripts.** Every claim in `pages/` cites its evidence in `log/` or `sources/`. Full rules in `knowledge/RULES.md`.
