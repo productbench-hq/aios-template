@@ -1,0 +1,4 @@
+interface:
+  display_name: "Estimate Business Value"
+  short_description: "Estimate first-year benefit, cost, ROI, and payback"
+  default_prompt: "Use $estimate-business-value to estimate a product initiative with me."

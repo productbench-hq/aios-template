@@ -23,6 +23,7 @@ The kit sets itself up through a short `/onboard` conversation. Then it grows in
 | Skill | What it does | Use it when | Setup |
 |---|---|---|---|
 | [`/understand`](.claude/skills/understand/SKILL.md) | Walks through a document one thought at a time. Lets you question the evidence, add context, and carry changes into a revised conclusion | You need to understand a document before deciding or taking ownership | None |
+| [`/estimate-business-value`](.claude/skills/estimate-business-value/SKILL.md) | Connects an initiative to a KPI and estimates first-year benefit, cost, ROI, and payback | You need to decide whether an initiative is worth the investment | Optional BI, analytics, and web research |
 | [`/onboard`](.claude/skills/onboard/SKILL.md) | Sets up your AIOS: your name, writing style, company and role, how you work together, optional goals. Skip anything. | You just got the kit, or your role changed | None |
 | [`/catching-up`](.claude/skills/catching-up/SKILL.md) | Reads what changed in your connected tools since you last looked: what needs you, what's out of date, with fixes for a yes | You start a work session and want to know what you missed | One connected tool |
 | [`/meetings-to-issues`](.claude/skills/meetings-to-issues/SKILL.md) | Turns meeting notes into tracker issues, logged decisions and parked ideas. Checks for duplicates and creates nothing until you say yes | A meeting just ended and its next steps need to land in Linear, Jira or Asana | A connected tracker. Walks you through the rest on first run |
